@@ -9,6 +9,7 @@ import RoomDetails from "../pages/RoomDetails";
 import MyBookings from "../pages/MyBookings";
 import MyListings from "../pages/MyListings";
 import UpdateRoom from "../pages/UpdateRoom";
+import NotFound from "../pages/NotFound";
 import PrivateRoute from "./PrivateRoute";
 
 const router = createBrowserRouter([
@@ -52,6 +53,10 @@ const router = createBrowserRouter([
             <UpdateRoom />
           </PrivateRoute>
         ),
+      },
+      {
+        path: "*",
+        element: <NotFound />,
       },
     ],
   },
