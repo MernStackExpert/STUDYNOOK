@@ -175,14 +175,14 @@ const Login = () => {
                 </motion.p>
               )}
 
-              <div className="flex justify-end">
+              {/* <div className="flex justify-end">
                 <a
                   href="#"
                   className="text-sm font-medium text-blue-600 hover:underline dark:text-blue-400"
                 >
                   Forgot password?
                 </a>
-              </div>
+              </div> */}
 
               <motion.button
                 whileHover={{ scale: 1.02 }}
