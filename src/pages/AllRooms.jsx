@@ -40,20 +40,20 @@ const AllRooms = () => {
   }, [search, filter]);
 
   return (
-    <div className="min-h-screen py-12 px-4 sm:px-6 lg:px-8 bg-gray-50/50 dark:bg-gray-900/40 transition-colors duration-300">
-      <div className="max-w-6xl mx-auto">
+    <div className="min-h-screen py-12 px-2 sm:px-6 lg:px-8 bg-gray-50/50 dark:bg-gray-900/40 transition-colors duration-300 pb-24 md:pb-12">
+      <div className="max-w-[1400px] mx-auto">
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           className="text-center mb-12"
         >
-          <h2 className="text-4xl font-extrabold text-gray-900 dark:text-white tracking-tight mb-3">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 dark:text-white tracking-tight mb-3">
             Explore All{" "}
             <span className="text-blue-600 dark:text-blue-400">
               Study Nooks
             </span>
           </h2>
-          <p className="text-gray-500 dark:text-gray-400 max-w-md mx-auto text-sm sm:text-base">
+          <p className="text-gray-500 dark:text-gray-400 max-w-md mx-auto text-xs sm:text-base px-4">
             Discover and instantly reserve premium, quiet work spaces tailored
             perfectly for your ultimate concentration.
           </p>
@@ -63,9 +63,9 @@ const AllRooms = () => {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1 }}
-          className="bg-white dark:bg-gray-800 p-4 sm:p-6 rounded-2xl shadow-xl border border-gray-100 dark:border-gray-700/60 flex flex-col md:flex-row gap-4 items-center mb-10"
+          className="bg-white dark:bg-gray-800 p-4 rounded-2xl shadow-xl border border-gray-100 dark:border-gray-700/60 flex flex-col sm:flex-row gap-4 items-center mb-10 mx-2 sm:mx-0"
         >
-          <div className="relative w-full md:flex-1 group">
+          <div className="relative w-full sm:flex-1 group">
             <div className="absolute inset-y-0 left-0 flex items-center pl-4 pointer-events-none text-gray-400 group-focus-within:text-blue-600 transition-colors">
               <FaSearch />
             </div>
@@ -78,7 +78,7 @@ const AllRooms = () => {
             />
           </div>
 
-          <div className="relative w-full md:w-64 group">
+          <div className="relative w-full sm:w-64 group">
             <div className="absolute inset-y-0 left-0 flex items-center pl-4 pointer-events-none text-gray-400 group-focus-within:text-blue-600 transition-colors">
               <FaFilter />
             </div>
@@ -121,7 +121,10 @@ const AllRooms = () => {
             </span>
           </div>
         ) : rooms.length > 0 ? (
-          <motion.div layout className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <motion.div
+            layout
+            className="grid grid-cols-1 md:grid-cols-3 gap-3 sm:gap-6 lg:gap-8 px-2 sm:px-0"
+          >
             <AnimatePresence mode="popLayout">
               {rooms.map((room) => (
                 <motion.div
